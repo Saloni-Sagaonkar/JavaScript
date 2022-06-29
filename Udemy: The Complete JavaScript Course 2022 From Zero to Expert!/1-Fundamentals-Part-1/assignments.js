@@ -129,10 +129,8 @@ is this happening?
 when you input 1
 8. Reflect on why we should use the === operator and type conversion in this 
 situation*/
-
-let numNeighbours = prompt(
-  "How many neighbour countries does your country have?"
-); //output string type
+/*
+let numNeighbours = prompt("How many neighbour countries does your country have?"); //output string type
 if (numNeighbours == 1) {
   //loose equality opeartor
   console.log("Only 1 border!");
@@ -144,9 +142,7 @@ if (numNeighbours == 1) {
 
 // LATER : This helps us prevent bugs
 
-numNeighbours = Number(
-  prompt("How many neighbour countries does your country have?")
-); // converted to number
+//numNeighbours = Number(prompt("How many neighbour countries does your country have?")); // converted to number
 if (numNeighbours === 1) {
   //strict equality opeartor
   console.log("Only 1 border!");
@@ -154,4 +150,70 @@ if (numNeighbours === 1) {
   console.log("More than 1 border");
 } else {
   console.log("No borders");
+}*/
+
+/*
+LECTURE: Logical Operators
+1. Comment out the previous code so the prompt doesn't get in the way
+2. Let's say Sarah is looking for a new country to live in. She wants to live in a 
+country that speaks english, has less than 50 million people and is not an 
+island.
+3. Write an if statement to help Sarah figure out if your country is right for her. 
+You will need to write a condition that accounts for all of Sarah's criteria. Take 
+your time with this, and check part of the solution if necessary.
+4. If yours is the right country, log a string like this: 'You should live in Portugal :)'. If 
+not, log 'Portugal does not meet your criteria :('
+5. Probably your country does not meet all the criteria. So go back and temporarily 
+change some variables in order to make the condition true (unless you live in 
+Canada :D)*/
+
+if ((language = "English" && population < 50 && !isIsland)) {
+  console.log(`You should live in ${country}' :)'`);
+} else {
+  console.log(`${country} does not meet your criteria :('`);
 }
+
+/*
+LECTURE: The switch Statement
+1. Use a switch statement to log the following string for the given 'language':
+chinese or mandarin: 'MOST number of native speakers!'
+spanish: '2nd place in number of native speakers'
+english: '3rd place'
+hindi: 'Number 4'
+arabic: '5th most spoken language'
+for all other simply log 'Great language too :D'*/
+
+language = "Hindi";
+switch (language) {
+  case "Chinese":
+  case "Mandarin":
+    console.log("MOST number of native speakers!");
+    break;
+  case "Spanish":
+    console.log("2nd place in number of native speakers");
+    break;
+  case "English":
+    console.log("3rd place");
+    break;
+  case "Hindi":
+    console.log("Number 4");
+    break;
+  case "Arabic":
+    console.log("5th most spoken language");
+    break;
+  default:
+    console.log("Great language too :D");
+}
+
+/*
+LECTURE: The Conditional (Ternary) Operator
+1. If your country's population is greater than 33 million, use the ternary operator 
+to log a string like this to the console: 'Portugal's population is above average'. 
+Otherwise, simply log 'Portugal's population is below average'. Notice how only
+one word changes between these two sentences!
+2. After checking the result, change the population temporarily to 13 and then to 
+130. See the different results, and set the population back to original*/
+
+console.log(
+  `${country}'s population is ${population > 33 ? "above" : "below"} average`
+);
